@@ -1,3 +1,5 @@
+<!-- MY EDITS:  1. Added Bootstrap CSS & JavaScript via CDN links. 2. Added Bootstrap Navbar (with dropdown menu; sticky top; and bs-dark colour scheme) 3. Changed copy (Work section will now be referred to as “Built Projects”), and added link for (what will be) Skills section. 4. Deleted hero section (which was commented out) 5. Added Bootstrap Jumbotron (including image, header and two buttons), used Bootstrap grid and base .btn class, added copy -->
+
 <!DOCTYPE html>
 <html lang="en-gb">
 
@@ -48,12 +50,31 @@
     </nav>
   </header>
 
-  <!--INACTIVE - Commented below out from starter code (no hero banner on my layout)
-  <section class="hero-banner">
-    <div>
-      <h2>Cool subtitle here!</h2>
-    </div>
-  </section>-->
+  <!-- Jumbotron (inc image & button) -->
+  <section class="container mt-4 p-5 rounded text-center jumbotron">
+    <article class="row align-items-center justify-content-center">
+      <article class="col-sm-5">
+        <img src="../03-practice-01 - Copy/assets/images/codeem-avatar.jpeg" class="rounded img-fluid jumbotron.img">
+      </article>
+      <article class="col-sm-7">
+        <article class="row">
+          <article class="col-sm-8">
+            <h1 class="display-5">This is Code Em</h1>
+          </article>
+          <article class="row">
+            <article class="col-sm-8">
+              <a href="#about" class="btn btn-outline btn-lg">Who is she?</a>
+            </article>
+          </article>
+          <article class="row">
+            <article class="col-sm-8">
+              <a href="#skills" class="btn btn-outline btn-lg">What can she bring to your team?</a>
+            </article>
+          </article>
+        </article>
+      </article>
+    </article>
+  </section>
 
   <main>
     <!-- About me -->
