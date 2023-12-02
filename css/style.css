@@ -1,0 +1,274 @@
+/*var() function for colours and font family (for use across page where variable added)*/
+:root {
+  --dark: black;
+  --light: white;
+  --font-family: "Segoe UI", "Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+}
+
+/*Styles all of page (where not overridden by class/id selector due to CSS specificity) (all elements’ padding and border are included in width and height)*/
+* {
+  box-sizing: border-box;
+}
+
+/*Styles body of page (where not overridden by class/id selector; the case for all element selectors below) (sets margin/padding for all elements in body, line height and background colour as per var function)*/
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background-color: var(--light);
+}
+
+/*Styles paragraphs, h2-h6, ul lists and links throughout page, as per variable function*/
+
+p,h2,h3,h4,h5,h6,a,ul {
+  color: var(--dark);
+  font-family: var(--font-family);
+}
+
+/*Styles unordered lists throughout page (removes lists bullet points)*/
+ul {
+  list-style-type: none;
+}
+
+/*INACTIVE - Commented below out from starter code (replaced with other CSS styling)
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/*
+
+/* **Header/Nav Bar** */
+
+/*Flex container for Header and Nav Links, and formatting for Header as per var function*/
+header {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  background-color: var(--dark);
+  color: var(--light);
+  font-family: var(--font-family);
+}
+
+/*Flex container for Nav Links (in unordered list)*/
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 300px;
+}
+
+/*Repostions Header on Nav Bar*/
+.margin-left {
+  margin-left: 30px;
+}
+
+/*Styling and positioning for Nav Links, and colour as per var function*/
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 200%;
+  margin-right: 30px;
+  color: var(--light);
+}
+
+/*Styling for Header (REMINDER: this styling will affect other h1s, if not overriden by class/id selector elsewhere)*/
+h1 {
+  font-size: 300%;
+}
+
+/* **About Me Section** */
+
+/*Grid for About Me section (used id selector so can link to this; set overflow as hidden, because worked out that there was overflow on child element)*/ /*CREDIT: worked this out thanks to the help of CSS-Tricks (2014) Finding/Fixing Unintended Body Overflow (https://css-tricks.com/findingfixing-unintended-body-overflow/)*/
+#about {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 20% 65%;
+  grid-column-gap: 1em;
+  overflow-x: hidden;
+ }
+
+ /*Postions Header in About grid cell (and does same for Work header in Work grid, and Contact header in Contact grid)*/
+.about-header, #work-header, .contact-header {
+  justify-self: right;
+  margin-right: 20px;
+}
+
+/*Sizing for image in About grid cell (so it will fill and adapt according to grid size; used id so won't be overridden)*/
+#about img {
+  max-width: 100%;
+  height: auto;
+  }
+
+/*Postions Text in About grid cell and sizes the font*/
+.about-text {
+  align-self: center;
+  padding-right: 10%;
+  font-size: 150%;
+}
+
+/* **Work Section** */
+
+/*Grid for Work section (grid-template areas defined so that work-big will appear larger than work-2 to 5 as per spec; used id so can link to this)*/
+#work {
+  margin: 0px 5%;
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-rows: 300px 200px 200px;
+  grid-template-columns: 10% 45% 45%;
+  grid-template-areas: "work-header work-big work-big" ". work-2 work-3" ". work-4 work-5";
+}
+
+/*Styling for links in Work section (removes line)*/
+#work a {
+  text-decoration: none;
+}
+
+/*Positions Work Header in Work grid*/
+#work-header {
+  grid-area: work-header;
+}
+
+/*Positions items in Work grid and adds background image of projects (used ids so won't be overridden)*/
+#work-big {
+  grid-area: work-big;
+  background-image: url(../images/01-html-css-git-challenge.png);
+}
+
+/*REMINDER: To add other projects, update background-images in #work-2 to 5*/
+#work-2 {
+  grid-area: work-2;
+  background-image: url(../images/green-placeholder.jpg);
+}
+
+#work-3 {
+  grid-area: work-3;
+  background-image: url(../images/green-placeholder.jpg);
+}
+
+#work-4 {
+  grid-area: work-4;
+  background-image: url(../images/green-placeholder.jpg);
+}
+
+#work-5 {
+  grid-area: work-5;
+  background-image: url(../images/green-placeholder.jpg);
+}
+
+/*Grid for Work Item Headers (within Work Grid)*/ /*CREDIT: code for this grid and work-header-2 below adapted from edX (2023) Skillsbootcamp in Front End Web Dev: Module 2: Lesson 02: Activity 02*/ /*Changed colours and size/positioning of headers using justify-self and changing max-width*/
+
+.work-grid {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.work-header-2 {
+  background-color: rgba(255,255,255,0.8);
+  border-bottom: 5px solid black;
+  justify-self: end;
+  padding: 25px;
+  max-width: 100%;
+  z-index: 100;
+  }
+
+/* **Contact Me Section** */
+
+/*Grid for Contact section (also sets font-family for grid; used id so can link to this; sets overflow as hidden, because worked out that there was overflow on child element)*/ /*CREDIT: worked this out thanks to the help of CSS-Tricks (2014) Finding/Fixing Unintended Body Overflow (https://css-tricks.com/findingfixing-unintended-body-overflow/)*/
+#contact {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-column-gap: 1em;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+/*Flex container for Contact links (in unordered list)*/
+ #contact ul {
+  display: flex;
+  justify-content: space-around;
+ }
+ 
+ /*Sets Contact links (list items) to inline*/
+ #contact li {
+  display: inline;
+ }
+
+ /*Styling for links in Work section (removes underlining, sets font family as per var function, sets font size and font weight)*/
+ #contact a {
+  text-decoration:none; 
+  font-family: var(--font-family);
+  font-size: 150%;
+  font-weight: bold;
+}
+
+/* **Media Queries** */
+
+/* *Medium (up to 1007px)* */
+
+/*No seperate media queries for Small (640px to 375px), as all elements displayed at Medium are still displayed at Small. Therefore below media queries actually apply for 376px to 1007px*/
+
+@media screen and (max-width: 1007px) {
+  /*Reduces font size in Header/Nav Bar*/
+  header h1, nav a {
+    font-size: 150%;
+  }
+
+  /*Reduces font size of main headers in About, Work and Contact; removes their margin*/
+  .about-header, #work-header, .contact-header {
+    font-size: 100%;
+    margin-right: 0px;
+  }
+
+  /*No longer displays image (avatar) in About*/
+  .about-image {
+    display: none;
+  }
+
+  /*Repositions text (takes up two coloums now) and resizes text in About*/
+  .about-text {
+    grid-column: 2 / span 3;
+    font-size: 100%;
+  }
+
+  /*Reduces font size of links in Contact*/
+  #contact a {
+    font-size: 100%;
+  }
+}
+
+/* *Mobile (smaller than 376px)* */
+
+@media screen and (max-width: 375px) {
+  /*No longer displays Header/Nav Bar and main headers in About, Work and Contact*/
+  header,.about-header, #work-header, .contact-header  {
+    display: none;
+  }
+
+  /*Repositions text in About (takes up three coloums now)*/
+   .about-text {
+    grid-column: 1 / span 3;
+  }
+
+  /*Repositions Contact links (in unordered list) (take up two coloums now)*/
+  #contact ul {
+    grid-column: 1 / span 2;
+  }
+}
