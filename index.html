@@ -1,5 +1,8 @@
-<!-- MY EDITS:  1. Added Bootstrap CSS & JavaScript via CDN links. 2. Added Bootstrap Navbar (with dropdown menu; sticky top; and bs-dark colour scheme) 3. Changed copy (Work section will now be referred to as “Built Projects”), and added link for (what will be) Skills section. 4. Deleted hero section (which was commented out) 5. Added Bootstrap Jumbotron (including image, header and two buttons), used Bootstrap grid and base .btn class, added copy 6. Deleted work section from starter code (too different to salvage) 7. Added Bootstrap container and grid, and two cards (each card includes title, text, image, link to project and button 8. Added copy to projects. 
+<!-- MY EDITS:  1. Added Bootstrap CSS & JavaScript via CDN links. 2. Added Bootstrap Navbar (with dropdown menu; sticky top; and bs-dark colour scheme) 3. Changed copy (Work section will now be referred to as “Built Projects”), and added link for (what will be) Skills section. 4. Deleted hero section (which was commented out) 5. Added Bootstrap Jumbotron (including image, header and two buttons), used Bootstrap grid and base .btn class, added copy 6. Deleted work section from starter code (too different to salvage) 7. Added Bootstrap container and grid, and two cards (each card includes title, text, image, link to project and button 8. Added copy to projects. 9. Added Bootstrap container and grid for Skills section, and added headers, images (icons) and copy. 10. Added credit in comment for Bootstrap icons. 11. Added class to images (icons) so can target in custom CSS 12. Added alt text to images (icons in Skills and avatar in Jumbotron).
+
  -->
+
+<!-- NOTE: Whenever using Bootstrap code, have changed div tags to semantic HTML wherever possible. Will do this throughout build for best practice (i.e. accessibility and SEO).-->
 
 <!DOCTYPE html>
 <html lang="en-gb">
@@ -8,18 +11,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Code Em - Web Developer</title>
-   <!--Bootstrap CSS-->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-   integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-   <!--Custom CSS-->
-  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../webdev-professional-page-bs/css/style.css" />
 </head>
 
 <body>
   <!-- Header/Nav Bar-->
   <header>
-    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top"
-      data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
       <section class="container-fluid">
         <a class="navbar-brand" href="#top">Code Em</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -55,7 +57,7 @@
   <section class="container mt-4 p-5 rounded text-center jumbotron">
     <article class="row align-items-center justify-content-center">
       <article class="col-sm-5">
-        <img src="../03-practice-01 - Copy/assets/images/codeem-avatar.jpeg" class="rounded img-fluid jumbotron.img">
+        <img src="../03-practice-01 - Copy/assets/images/codeem-avatar.jpeg" class="rounded img-fluid" alt="An avatar of Code Em, in black and white, showing her head and shoulders. The character has her hair tied up in a bun on the top of her head, a small smile on her face and is wearing a turtle-neck jumper.">
       </article>
       <article class="col-sm-7">
         <article class="row">
@@ -79,56 +81,96 @@
 
   <main>
     <!-- Built Projects section (in Grid, using Cards) -->
-  <section class="container-fluid my-5">
-    <article class="row">
-      <!--Card 1 (Project 1)-->
-      <article id="project-1" class="card mb-3 card-height">
-        <article class="row g-0">
-          <article class="col-md-5">
-            <!--Alt tags set to null throughout Built Projects because images convey no meaning (marked as decorative)-->
-            <img src="../webdev-professional-page-bs/images/refactor-for-accessibility.png" class="card-img"
-              alt="">
-          </article>
-          <article class="col-md-7">
-            <article class="card-body">
-              <h5 class="card-title">Refactor for accessibility</h5>
-              <p class="card-text">The aim of this project was to improve the accessibility of the Agency’s existing
-                webpage. The motivations for this included ensuring that disabled users (customers) can access and use
-                the site, optimising the site for search engines, and to meet accessibility standards (e.g. WCAG 2.2,
-                2023) and legal obligations.</p>
-              <a href="https://code0em.github.io/refactor-for-accessibility/" class="btn btn-dark">Visit Refactor
-                Project</a>
+    <section class="container-fluid my-5">
+      <article class="row">
+        <!--Card 1 (Project 1)-->
+        <article id="project-1" class="card mb-3 card-height">
+          <article class="row g-0">
+            <article class="col-md-5">
+              <!--Alt tags set to null throughout Built Projects because images convey no meaning (marked as decorative)-->
+              <img src="../webdev-professional-page-bs/images/refactor-for-accessibility.png" class="card-img" alt="">
+            </article>
+            <article class="col-md-7">
+              <article class="card-body">
+                <h5 class="card-title">Refactor for accessibility</h5>
+                <p class="card-text">The aim of this project was to improve the accessibility of the Agency’s existing
+                  webpage. The motivations for this included ensuring that disabled users (customers) can access and use
+                  the site, optimising the site for search engines, and to meet accessibility standards (e.g. WCAG 2.2,
+                  2023) and legal obligations.</p>
+                <a href="https://code0em.github.io/refactor-for-accessibility/" class="btn btn-dark">Visit Refactor
+                  Project</a>
+              </article>
             </article>
           </article>
         </article>
-      </article>
-      <!--Card 2 (Project 2)-->
-      <article id="project-2" class="card mb-3 card-height">
-        <article class="row g-0">
-          <article class="col-md-5">
-            <img src="../webdev-professional-page-bs/images/webdev-professional-page-screenshot.png"
-              class="card-img" alt="">
-          </article>
-          <article class="col-md-7">
-            <article class="card-body">
-              <h5 class="card-title">Web Developer’s Professional Page</h5>
-              <p class="card-text">The aim of this project was to build a portfolio to showcase the developer’s work.
-                The motivations for this included bolstering the developer’s public image and consolidating their
-                deployed applications into a ‘one-stop-shop’ that is easily accessible to potential employers.</p>
-              <a href="https://code0em.github.io/webdev-professional-page/" class="btn btn-dark">Visit Professional Page Project</a>
+        <!--Card 2 (Project 2)-->
+        <article id="project-2" class="card mb-3 card-height">
+          <article class="row g-0">
+            <article class="col-md-5">
+              <img src="../webdev-professional-page-bs/images/webdev-professional-page-screenshot.png" class="card-img"
+                alt="">
+            </article>
+            <article class="col-md-7">
+              <article class="card-body">
+                <h5 class="card-title">Web Developer’s Professional Page</h5>
+                <p class="card-text">The aim of this project was to build a portfolio to showcase the developer’s work.
+                  The motivations for this included bolstering the developer’s public image and consolidating their
+                  deployed applications into a ‘one-stop-shop’ that is easily accessible to potential employers.</p>
+                <a href="https://code0em.github.io/webdev-professional-page/" class="btn btn-dark">Visit Professional
+                  Page Project</a>
+              </article>
             </article>
           </article>
         </article>
+          <!--REMINDER: need to add more projects here (use cards like above)-->
       </article>
-    </article>
-  </section>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="container-fluid">
+      <article class="row">
+        <article class="col-12 text-center">
+          <!--Skills Heading-->
+          <h2>Skills</h2>
+        </article>
+        <!--Technical Skills Icon-->
+        <article class="col-12 mt-3 mb-3 text-center">
+          <!--CREDIT: Icons in Skills Section and Footer section from Bootstrap (no date) Bootstrap Icons - Official open source SVG icon library for Bootstrap (https://icons.getbootstrap.com/)-->
+          <img src="../03-practice-01/assets/images/laptop.svg" alt="Laptop icon to indicate Technical Skills" class="skills-img">
+        </article>
+        <!--Technical Skills-->
+        <p class="col-md-4 text-center">html</p>
+        <p class="col-md-4 text-center">css</p>
+        <p class="col-md-4 text-center">bootstrap</p>
+        <p class="col-md-4 text-center">javaScript</p>
+        <p class="col-md-4 text-center">jQuery</p>
+        <p class="col-md-4 text-center">react</p>
+        <!--Dynamic Skills Icon-->
+        <article class="col-12 mt-3 mb-3 text-center">
+          <img src="../03-practice-01/assets/images/lightbulb.svg" alt="Lightbulb icon to indicate Dynamic Skills" class="skills-img">
+        </article>
+        <!--Dynamic Skills-->
+        <p class="col-md-4 text-center">process driven</p>
+        <p class="col-md-4 text-center">solution focussed</p>
+        <p class="col-md-4 text-center">adaptable</p>
+        <!--Comms Skills Icon-->
+        <article class="col-12 mt-3 mb-3 text-center">
+          <img src="../03-practice-01/assets/images/chat.svg" alt="Speech bubble icon to indicate Communications Skills" class="skills-img">
+        </article>
+        <!--Comms Skills-->
+        <p class="col-md-4 text-center">client focussed</p>
+        <p class="col-md-4 text-center">team player</p>
+        <p class="col-md-4 text-center mb-5">active listener</p>
+      </article>
+    </section>
 
     <!-- About me -->
     <section id="about">
       <h2 class="about-header">About Me</h2>
-      <img class="about-image" src="./images/codeem-avatar.jpeg" alt="An avatar of Code Em, in black and white, showing her head and shoulders. The character has her hair tied up in a bun on the top of her head, a small smile on her face and is wearing a turtle-neck jumper.">
+      <img class="about-image" src="./images/codeem-avatar.jpeg">
       <ul class="about-text">
-        <li><b>Learning:</b> junior web developer, studying hard and putting learning into action through disciplined practice.</li><br>
+        <li><b>Learning:</b> junior web developer, studying hard and putting learning into action through disciplined
+          practice.</li><br>
         <li><b>Growing:</b> pivoting from over a decade’s long career in Higher Education.</li><br>
         <li><b>Building:</b> watch this space, as the built projects grow.</li><br>
       </ul>

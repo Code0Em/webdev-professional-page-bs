@@ -1,4 +1,4 @@
-/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section */
+/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section 3. Set size of images (icons) in Skills section*/
 
 /*var() function for colours and font family (for use across page where variable added)*/
 :root {
@@ -65,75 +65,15 @@ ul {
   font-size: 150%;
 }
 
-/* **Work Section** */
+/* **Built Projects Section - EMPTY** */
 
-/*Grid for Work section (grid-template areas defined so that work-big will appear larger than work-2 to 5 as per spec; used id so can link to this)*/
-#work {
-  margin: 0px 5%;
-  display: grid;
-  grid-gap: 0.5em;
-  grid-template-rows: 300px 200px 200px;
-  grid-template-columns: 10% 45% 45%;
-  grid-template-areas: "work-header work-big work-big" ". work-2 work-3" ". work-4 work-5";
+/* **Skills Section** */
+
+/*Sets size of images (icons) in Skills*/
+.skills-img {
+  width: 32px;
+  height: 32px;
 }
-
-/*Styling for links in Work section (removes line)*/
-#work a {
-  text-decoration: none;
-}
-
-/*Positions Work Header in Work grid*/
-#work-header {
-  grid-area: work-header;
-}
-
-/*Positions items in Work grid and adds background image of projects (used ids so won't be overridden)*/
-#work-big {
-  grid-area: work-big;
-  background-image: url(../images/01-html-css-git-challenge.png);
-}
-
-/*REMINDER: To add other projects, update background-images in #work-2 to 5*/
-#work-2 {
-  grid-area: work-2;
-  background-image: url(../images/green-placeholder.jpg);
-}
-
-#work-3 {
-  grid-area: work-3;
-  background-image: url(../images/green-placeholder.jpg);
-}
-
-#work-4 {
-  grid-area: work-4;
-  background-image: url(../images/green-placeholder.jpg);
-}
-
-#work-5 {
-  grid-area: work-5;
-  background-image: url(../images/green-placeholder.jpg);
-}
-
-/*Grid for Work Item Headers (within Work Grid)*/ /*CREDIT: code for this grid and work-header-2 below adapted from edX (2023) Skillsbootcamp in Front End Web Dev: Module 2: Lesson 02: Activity 02*/ /*Changed colours and size/positioning of headers using justify-self and changing max-width*/
-
-.work-grid {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 5px;
-  cursor: pointer;
-  display: grid;
-  align-content: end;
-}
-
-.work-header-2 {
-  background-color: rgba(255,255,255,0.8);
-  border-bottom: 5px solid black;
-  justify-self: end;
-  padding: 25px;
-  max-width: 100%;
-  z-index: 100;
-  }
 
 /* **Contact Me Section** */
 
