@@ -1,3 +1,5 @@
+/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section */
+
 /*var() function for colours and font family (for use across page where variable added)*/
 :root {
   --dark: black;
