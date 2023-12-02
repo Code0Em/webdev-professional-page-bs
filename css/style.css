@@ -31,62 +31,7 @@ ul {
   list-style-type: none;
 }
 
-/*INACTIVE - Commented below out from starter code (replaced with other CSS styling)
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-/*
-
-/* **Header/Nav Bar** */
-
-/*Flex container for Header and Nav Links, and formatting for Header as per var function*/
-header {
-  width: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1%;
-  background-color: var(--dark);
-  color: var(--light);
-  font-family: var(--font-family);
-}
-
-/*Flex container for Nav Links (in unordered list)*/
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  min-width: 300px;
-}
-
-/*Repostions Header on Nav Bar*/
-.margin-left {
-  margin-left: 30px;
-}
-
-/*Styling and positioning for Nav Links, and colour as per var function*/
-nav a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 200%;
-  margin-right: 30px;
-  color: var(--light);
-}
-
-/*Styling for Header (REMINDER: this styling will affect other h1s, if not overriden by class/id selector elsewhere)*/
-h1 {
-  font-size: 300%;
-}
+/* **Header/Nav Bar - EMPTY** */
 
 /* **About Me Section** */
 
