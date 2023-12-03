@@ -1,6 +1,4 @@
-<!-- MY EDITS:  1. Added Bootstrap CSS & JavaScript via CDN links. 2. Added Bootstrap Navbar (with dropdown menu; sticky top; and bs-dark colour scheme) 3. Changed copy (Work section will now be referred to as “Built Projects”), and added link for (what will be) Skills section. 4. Deleted hero section (which was commented out) 5. Added Bootstrap Jumbotron (including image, header and two buttons), used Bootstrap grid and base .btn class, added copy 6. Deleted work section from starter code (too different to salvage) 7. Added Bootstrap container and grid to Built Projects, and two cards (each card includes title, text, image, link to project and button) 8. Added copy to projects. 9. Added Bootstrap container and grid for Skills section, and added headers, images (icons) and copy. 10. Added credit in comment for Bootstrap icons. 11. Added class to images (icons) so can target in custom CSS 12. Added alt text to images (icons in Skills and avatar in Jumbotron) 13. Added alt text to images (icons in Skills and avatar in Jumbotron) 14. Delete Contact section 14. Added Bootstrap container and button to About 15. Added images (icons) to Skills section 16. Added Bootstrap container and grid for Footer section (used bs-dark colour scheme), added images (icons), links and copy to this, and added alt text to images (icons). 17. Added id tag to body (so can target in custom CSS)
-
- -->
+<!-- MY EDITS:  1. Added Bootstrap CSS & JavaScript via CDN links. 2. Added Bootstrap Navbar (with dropdown menu; sticky top; and bs-dark colour scheme) 3. Changed copy (Work section will now be referred to as “Built Projects”), and added link for (what will be) Skills section. 4. Deleted hero section (which was commented out) 5. Added Bootstrap Jumbotron (including image, header and two buttons), used Bootstrap grid and base .btn class, added copy 6. Deleted work section from starter code (too different to salvage) 7. Added Bootstrap container and grid to Built Projects, and two cards (each card includes title, text, image, link to project and button) 8. Added copy to projects. 9. Added Bootstrap container and grid for Skills section, and added headers, images (icons) and copy. 10. Added credit in comment for Bootstrap icons. 11. Added class to images (icons) so can target in custom CSS 12. Added alt text to images (icons in Skills and avatar in Jumbotron) 13. Added alt text to images (icons in Skills and avatar in Jumbotron) 14. Delete Contact section 14. Added Bootstrap container and button to About 15. Added images (icons) to Skills section 16. Added Bootstrap container and grid for Footer section (used bs-dark colour scheme), added images (icons), links and copy to this, and added alt text to images (icons). 17. Added id tag to body (so can target in custom CSS) 18. Added two more Bootstrap cards to Built Projects 19. Added modal to body, and modal buttons to these cards (so will display ‘coming soon’ message, as these projects aren’t built yet). -->
 
 <!-- NOTE: Whenever using Bootstrap code, have changed div tags to semantic HTML wherever possible. Will do this throughout build for best practice (i.e. accessibility and SEO).-->
 
@@ -20,6 +18,24 @@
 
 <!-- REMINDER: Added id tag on body (for use in Custom CSS) -->
 <body id="bootstrap-override">
+  <!-- Modal (for Projects 3 & 4) -->
+  <section class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <article class="modal-dialog">
+      <article class="modal-content">
+        <article class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Coming Soon</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </article>
+        <article class="modal-body">
+          <p>Oops, this project isn’t ready yet.</p>
+        </article>
+        <article class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </article>
+      </article>
+    </article>
+  </section>
+
   <!-- Header/Nav Bar-->
   <header>
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
@@ -81,7 +97,6 @@
     </article>
   </section>
 
-  <!-- Built Projects, Skills and About sections in Main -->
   <main>
     <!-- Built Projects section (in Grid, using Cards) -->
     <section class="container-fluid my-5">
@@ -125,7 +140,48 @@
             </article>
           </article>
         </article>
-        <!--REMINDER: need to add more projects here (use cards like above)-->
+        <!--Card 3 (Project 3)-->
+        <!--REMINDER: To add other projects, update card below-->
+        <article id="project-3" class="card mb-3 card-height">
+          <article class="row g-0">
+            <article class="col-md-5">
+              <img src="../03-practice-01 - Copy/assets/images/grey-placeholder.jpg" class="card-img" alt="">
+            </article>
+            <article class="col-md-7">
+              <article class="card-body">
+                <h5 class="card-title">Coming Soon</h5>
+                <p class="card-text">This project is in the making...</p>
+                <!--Button for modal-->
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Visit Project
+                </button>
+                <!--REMINDER: To add other projects, remove modal (below body) & button for modal (above) and activate anchor below instead
+              <a href="#" class="btn btn-dark">Visit Project</a>-->
+              </article>
+            </article>
+          </article>
+        </article>
+        <!--Card 4 (Project 4)-->
+        <!--REMINDER: To add other projects, update card below  -->
+        <article id="project-4" class="card card-height">
+          <article class="row g-0">
+            <article class="col-md-5">
+              <img src="../03-practice-01 - Copy/assets/images/grey-placeholder.jpg" class="card-img" alt="">
+            </article>
+            <article class="col-md-7">
+              <article class="card-body">
+                <h5 class="card-title">Coming Soon</h5>
+                <p class="card-text">This project is in the making...</p>
+                <!--Button for modal-->
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Visit Project
+                </button>
+                <!--REMINDER: To add other projects, remove modal (below body) & button for modal (above) and activate anchor below instead
+              <a href="#" class="btn btn-dark">Visit Project</a>-->
+              </article>
+            </article>
+          </article>
+        </article>
       </article>
     </section>
 
@@ -182,7 +238,7 @@
   </main>
 
   <!-- Footer -->
-   <footer class="footer bg-dark">
+  <footer class="footer bg-dark">
     <section class="container-fluid text-center">
       <article class="row g-3">
         <a class="col-6" href="mailto:code.em@outlook.com"><img
