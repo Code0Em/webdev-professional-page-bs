@@ -1,35 +1,25 @@
-/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section 3. Set size of images (icons) in Skills section 4.Deleted CSS for About and Contact sections*/
+/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section 3. Set size of images (icons) in Skills section 4.Deleted CSS for About and Contact sections 5. Changed font-family in var() function. 6. Deleted global styling that’s no longer needed 7. Added custom styling to body, and p, h1-6, links and unordered lists/list items throughout the page (did this by targeting id on body, so overrides Bootstrap’s styling). 8. Added credit for this idea in comments. 9. Added important property to font-family (so completely overrides Bootstrap's styling).
+*/
+
+/* **Whole page (global)** */
 
 /*var() function for colours and font family (for use across page where variable added)*/
 :root {
   --dark: black;
   --light: white;
-  --font-family: "Segoe UI", "Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+  --font-family: arial, helvetica, sans-serif; 
 }
 
-/*Styles all of page (where not overridden by class/id selector due to CSS specificity) (all elements’ padding and border are included in width and height)*/
-* {
-  box-sizing: border-box;
-}
-
-/*Styles body of page (where not overridden by class/id selector; the case for all element selectors below) (sets margin/padding for all elements in body, line height and background colour as per var function)*/
-
-body {
-  margin: 0;
-  padding: 0;
+/*Styles body of page (sets line height and background colour as per var function).*/ /*Targeted id that's applied to body to override Bootstrap's styling*//*CREDIT: thanks to smugglerFlynn for this idea, via Stack Overflow (2013) How can I override Bootstrap CSS styles? (https://stackoverflow.com/questions/20721248/how-can-i-override-bootstrap-css-styles)*/
+#bootstrap-override body {
   line-height: 1.5;
   background-color: var(--light);
 }
 
-/*Styles paragraphs, h2-h6, ul lists and links throughout page, as per variable function*/
-
-p,h2,h3,h4,h5,h6,a,ul {
+/*Styles paragraphs, h1-h6, links, unordered lists and list items throughout page (as per variable function) and styles unordered lists throughout page (removes bullet points)*//*Important property needed on font-family to completely override Bootstrap's styling*/
+#bootstrap-override p,h1,h2,h3,h4,h5,h6,a,ul,li {
   color: var(--dark);
-  font-family: var(--font-family);
-}
-
-/*Styles unordered lists throughout page (removes lists bullet points)*/
-ul {
+  font-family: var(--font-family) !important;
   list-style-type: none;
 }
 
@@ -46,14 +36,6 @@ ul {
 }
 
 /* **About/Contact Section - EMPTY** */
-
- /*Styling for links in Work section (removes underlining, sets font family as per var function, sets font size and font weight)*/
- #contact a {
-  text-decoration:none; 
-  font-family: var(--font-family);
-  font-size: 150%;
-  font-weight: bold;
-}
 
 /* **Media Queries** */
 
