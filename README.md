@@ -12,3 +12,14 @@ The specification for the footer section (also specific to this iteration of the
 
 As with the original project brief, the page was required to be responsive on various screens and devices.
 
+## Build
+
+To meet the aims of the project, Bootstrap layouts (e.g. containers, grids), components (e.g. navbar, cards, buttons) and more were utilised.
+
+While the pages relies on Bootstrap’s styling for the most part, a custom CSS was also built to override some of this styling (e.g. font-family, color etc).
+
+The page also relies on Bootstrap for its ‘built-in’ responsiveness, however two custom media queries were added for stylistic preferences at resolutions equal to or greater than 768px (i.e. Boostrap’s medium breakpoint).
+
+## Installation
+
+N/A
