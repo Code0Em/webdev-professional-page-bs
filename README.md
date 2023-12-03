@@ -1,5 +1,16 @@
 # Web Developer’s Professional Page (Bootstrap)
 
+## Contents
+
+* [Description](#description)
+* [Build](#build)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+* [Acknowledgments](#acknowledgments)
+* [References](#references)
+
 ## Description
 
 This project is an iteration of the [Web Developer’s Professional Page (2023)](https://code0em.github.io/webdev-professional-page/). The aim of this project was to build a portfolio to showcase the developer’s work. The motivations for this included bolstering the developer’s public image and consolidating their deployed applications into a ‘one-stop-shop’ that is easily accessible to potential employers.
@@ -38,3 +49,28 @@ The webpage on a resolution of 1400px (or higher) will display as follows:
 
 Note: On resolutions of 1399px or below, aspects of the pages will display differently. For example, on resolutions equal to or less than 768px, the project images will appear in full (i.e. not cropped according to ratio) and will be positioned above the project header, text and CTA button.
 
+## Credits
+
+Credit given to Bootstrap (no date) for the icons utilised in the built projects and footer sections.
+
+Credit given to smugglerFlynn, whose Stack Overflow (2013) response helped to solve how to override Bootstrap’s styling (credit also cited in code comments). Credit also given to W3Schools (no date) for their box-shadow colour combination, which was used on the hover effect in the footer section (credit also cited in code comments).
+
+Credit given to the avatar-maker tool, which was used to create the avatar displayed in the jumbotron. All references listed below. 
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+## Acknowledgments
+
+Code written by Code0Em ([email](mailto:code.em@outlook.com)/ [GitHub](https://github.com/Code0Em)).
+
+## References
+
+Anon (no date) [*Avatar Maker*](https://avatarmaker.com).
+
+Bootstrap (no date) [*Bootstrap Icons - Official open source SVG icon library for Bootstrap*](https://icons.getbootstrap.com/).
+
+smugglerFlynn via Stack Overflow (2013) [*How can I override Bootstrap CSS styles?*](https://stackoverflow.com/questions/20721248/how-can-i-override-bootstrap-css-styles).
+
+W3Schools (no date) [*CSS Box Shadow*](https://www.w3schools.com/css/css3_shadows_box.asp).
