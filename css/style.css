@@ -6,24 +6,41 @@
 :root {
   --dark: black;
   --light: white;
-  --font-family: arial, helvetica, sans-serif; 
+  --font-family: arial, helvetica, sans-serif;
 }
 
-/*Styles body of page (sets line height and background colour as per var function).*/ /*Targeted id that's applied to body to override Bootstrap's styling*//*CREDIT: thanks to smugglerFlynn for this idea, via Stack Overflow (2013) How can I override Bootstrap CSS styles? (https://stackoverflow.com/questions/20721248/how-can-i-override-bootstrap-css-styles)*/
+/*Styles body of page (sets line height and background colour as per var function).*/
+/*Targeted id that's applied to body to override Bootstrap's styling*/
+/*CREDIT: thanks to smugglerFlynn for this idea, via Stack Overflow (2013) How can I override Bootstrap CSS styles? (https://stackoverflow.com/questions/20721248/how-can-i-override-bootstrap-css-styles)*/
 #bootstrap-override body {
   line-height: 1.5;
   background-color: var(--light);
 }
 
-/*Styles paragraphs, h1-h6, links, unordered lists and list items throughout page (as per variable function) and styles unordered lists throughout page (removes bullet points)*//*Important property needed on font-family to completely override Bootstrap's styling*/
-#bootstrap-override p,h1,h2,h3,h4,h5,h6,a,ul,li {
+/*Styles paragraphs, h1-h6, links, unordered lists and list items throughout page (as per variable function) and styles unordered lists throughout page (removes bullet points)*/
+/*Important property needed on font-family to completely override Bootstrap's styling*/
+#bootstrap-override p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+li {
   color: var(--dark);
   font-family: var(--font-family) !important;
   list-style-type: none;
 }
 
 /*Adds top padding to h1-h6 (so sticky Navbar doesn't cover content when navigating via links)*/
-#bootstrap-override h1,h2,h3,h4,h5,h6 {
+#bootstrap-override h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding-top: 55px;
 }
 
@@ -60,7 +77,8 @@
   height: 45px;
 }
 
-/*Sets partial invert and box shadow to Footer icons (links) when hover over them*//*CREDIT: box-shadow colour combination cited from W3School (no date) CSS Box Shadow (https://www.w3schools.com/css/css3_shadows_box.asp)*/
+/*Sets partial invert and box shadow to Footer icons (links) when hover over them*/
+/*CREDIT: box-shadow colour combination cited from W3School (no date) CSS Box Shadow (https://www.w3schools.com/css/css3_shadows_box.asp)*/
 #bootstrap-override .footer img:hover {
   filter: invert(40%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -79,12 +97,12 @@
 
   /*Sets height for cards in Built Projects*/
   .card-height {
-      height: 400px;
+    height: 400px;
   }
 
   /*Sets height for images in Built Projects, and sets images to maintain ratio but cropped as necessary*/
   .card-img {
-      height: 399px;
-      object-fit: cover;
+    height: 399px;
+    object-fit: cover;
   }
 }
