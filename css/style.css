@@ -1,7 +1,4 @@
-/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section 3. Set size of images (icons) in Skills section 4.Deleted CSS for About and Contact sections 5. Changed font-family in var() function. 6. Deleted global styling that’s no longer needed 7. Added custom styling to body, and p, h1-6, links and unordered lists/list items throughout the page (did this by targeting id on body, so overrides Bootstrap’s styling). 8. Added credit for this idea in comments. 9. Added important property to font-family (so completely overrides Bootstrap's styling) 10. Added styling to Footer, including hover effect to links/images (icons) 11. Added credit for box-shadow colour in comments 12. Commented out existing media queries (so can inspect page’s responsiveness without/Bootstrap only) 13. Added padding to all h1-6 (so sticky navbar not covering content).
-
-
-*/
+/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section 3. Set size of images (icons) in Skills section 4.Deleted CSS for About and Contact sections 5. Changed font-family in var() function. 6. Deleted global styling that’s no longer needed 7. Added custom styling to body, and p, h1-6, links and unordered lists/list items throughout the page (did this by targeting id on body, so overrides Bootstrap’s styling). 8. Added credit for this idea in comments. 9. Added important property to font-family (so completely overrides Bootstrap's styling) 10. Added styling to Footer, including hover effect to links/images (icons) 11. Added credit for box-shadow colour in comments 12. Commented out existing media queries (so can inspect page’s responsiveness without/Bootstrap only) 13. Added padding to all h1-6 (so sticky navbar not covering content) 14. Deleted existing media queries ((because Bootstrap now provides responsiveness) 15. But added media query for ≥768px so Projects cards and images are smaller and images are set to ‘cover’ (on lower resolutions, Bootstrap’s responsiveness alters card/images in preferred way so custom media queries not deemed necessary) 16. Set max width to containers in Built Projects, Skills and About sections (at all resolutions)*/
 
 /* **Whole page (global)** */
 
@@ -28,6 +25,11 @@
 /*Adds top padding to h1-h6 (so sticky Navbar doesn't cover content when navigating via links)*/
 #bootstrap-override h1,h2,h3,h4,h5,h6 {
   padding-top: 55px;
+}
+
+/*Sets max width to containers (in Built Projects, Skills and About)*/
+#bootstrap-override .container-fluid {
+  max-width: 70%
 }
 
 /* **Header/Nav Bar - EMPTY** */
@@ -58,7 +60,7 @@
   height: 45px;
 }
 
-/*Sets partial invert and box shadow to Footer icons (links) when hover over them*//*CREDIT: box-shadow colour combination cited from W3Schools (no date) CSS Box Shadow (https://www.w3schools.com/css/css3_shadows_box.asp)*/
+/*Sets partial invert and box shadow to Footer icons (links) when hover over them*//*CREDIT: box-shadow colour combination cited from W3School (no date) CSS Box Shadow (https://www.w3schools.com/css/css3_shadows_box.asp)*/
 #bootstrap-override .footer img:hover {
   filter: invert(40%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -66,55 +68,23 @@
 
 /* **Media Queries** */
 
-/* *Medium (up to 1007px)* */
+/*NOTE: Majority of page's responsiveness relies on Bootstrap, however following Media Queries added for stylistic preferences*/
 
-/*No seperate media queries for Small (640px to 375px), as all elements displayed at Medium are still displayed at Small. Therefore below media queries actually apply for 376px to 1007px*/
+/* **Equal to or greater than 768px (Bootstrap's medium breakpoint)** */
 
- /*@media screen and (max-width: 1007px) {
-  /*Reduces font size in Header/Nav Bar*/
-   /*header h1, nav a {
-    font-size: 150%;
+@media screen and (min-width: 768px) {
+  /* **Built Projects Section ** */
+
+  /*REMINDER: Currently these classes only apply to Built Projects*/
+
+  /*Sets height for cards in Built Projects*/
+  .card-height {
+      height: 400px;
   }
 
-  /*Reduces font size of main headers in About, Work and Contact; removes their margin*/
-   /*.about-header, #work-header, .contact-header {
-    font-size: 100%;
-    margin-right: 0px;
-  }
-
-  /*No longer displays image (avatar) in About*/
-   /*.about-image {
-    display: none;
-  }
-
-  /*Repositions text (takes up two coloums now) and resizes text in About*/
-   /*.about-text {
-    grid-column: 2 / span 3;
-    font-size: 100%;
-  }
-
-  /*Reduces font size of links in Contact*/
-   /*#contact a {
-    font-size: 100%;
+  /*Sets height for images in Built Projects, and sets images to maintain ratio but cropped as necessary*/
+  .card-img {
+      height: 399px;
+      object-fit: cover;
   }
 }
-
-/* *Mobile (smaller than 376px)* */
-
- /*@media screen and (max-width: 375px) {
-  /*No longer displays Header/Nav Bar and main headers in About, Work and Contact*/
-  /* header,.about-header, #work-header, .contact-header  {
-    display: none;
-  }
-
-  /*Repositions text in About (takes up three coloums now)*/
-   /* .about-text {
-    grid-column: 1 / span 3;
-  }
-
-  /*Repositions Contact links (in unordered list) (take up two coloums now)*/
-  /* #contact ul {
-    grid-column: 1 / span 2;
-  }
-}
-*/
