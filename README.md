@@ -27,7 +27,7 @@ As with the original project brief, the page was required to be responsive on va
 
 To meet the aims of the project, Bootstrap layouts (e.g. containers, grids), components (e.g. navbar, cards, buttons) and more were utilised.
 
-While the pages relies on Bootstrap’s styling for the most part, a custom CSS was also built to override some of this styling (e.g. font-family, color etc).
+While the page relies on Bootstrap’s styling for the most part, a custom CSS was also built to override some of this styling (e.g. font-family, color etc).
 
 The page also relies on Bootstrap for its ‘built-in’ responsiveness, however two custom media queries were added for stylistic preferences at resolutions equal to or greater than 768px (i.e. Boostrap’s medium breakpoint).
 
@@ -37,7 +37,7 @@ N/A
 
 ## Usage
 
-Users navigate to the webpage via the URL ([Code Em - Web Developer](ADD LINK WHEN DEPLOYED)). When on the webpage, users can navigate to different sections of the page via the hyperlinks in the navigation bar.
+Users navigate to the webpage via the URL ([Code Em - Web Developer](https://code0em.github.io/webdev-professional-page-bs/)). When on the webpage, users can navigate to different sections of the page via the hyperlinks in the navigation bar.
 
 Call to action (CTA) buttons within the jumbotron, built projects and about sections also prompt users to immediate action. For example, to visit the projects showcased on the page, users can select the CTA button labeled “Visit [project name]” and will be navigated to said project’s external page.
 
