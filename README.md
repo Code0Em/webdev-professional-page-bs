@@ -23,3 +23,18 @@ The page also relies on Bootstrap for its ‘built-in’ responsiveness, however
 ## Installation
 
 N/A
+
+## Usage
+
+Users navigate to the webpage via the URL ([Code Em - Web Developer](ADD LINK WHEN DEPLOYED)). When on the webpage, users can navigate to different sections of the page via the hyperlinks in the navigation bar.
+
+Call to action (CTA) buttons within the jumbotron, built projects and about sections also prompt users to immediate action. For example, to visit the projects showcased on the page, users can select the CTA button labeled “Visit [project name]” and will be navigated to said project’s external page.
+
+Note: Whilst some projects remain ‘in the making’ (i.e. are not yet available to visit), a Bootstrap modal has been used to display a ‘coming soon’ message when the user selects these associated CTA buttons.
+
+The webpage on a resolution of 1400px (or higher) will display as follows:
+
+![Screenshot of Code Em Web Developer Bootstrap homepage](./images/webdev-professional-page-bootstrap-screenshot.png)
+
+Note: On resolutions of 1399px or below, aspects of the pages will display differently. For example, on resolutions equal to or less than 768px, the project images will appear in full (i.e. not cropped according to ratio) and will be positioned above the project header, text and CTA button.
+
