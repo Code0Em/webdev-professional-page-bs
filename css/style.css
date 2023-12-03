@@ -1,4 +1,4 @@
-/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section 3. Set size of images (icons) in Skills section*/
+/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section 3. Set size of images (icons) in Skills section 4.Deleted CSS for About and Contact sections*/
 
 /*var() function for colours and font family (for use across page where variable added)*/
 :root {
@@ -35,36 +35,6 @@ ul {
 
 /* **Header/Nav Bar - EMPTY** */
 
-/* **About Me Section** */
-
-/*Grid for About Me section (used id selector so can link to this; set overflow as hidden, because worked out that there was overflow on child element)*/ /*CREDIT: worked this out thanks to the help of CSS-Tricks (2014) Finding/Fixing Unintended Body Overflow (https://css-tricks.com/findingfixing-unintended-body-overflow/)*/
-#about {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 15% 20% 65%;
-  grid-column-gap: 1em;
-  overflow-x: hidden;
- }
-
- /*Postions Header in About grid cell (and does same for Work header in Work grid, and Contact header in Contact grid)*/
-.about-header, #work-header, .contact-header {
-  justify-self: right;
-  margin-right: 20px;
-}
-
-/*Sizing for image in About grid cell (so it will fill and adapt according to grid size; used id so won't be overridden)*/
-#about img {
-  max-width: 100%;
-  height: auto;
-  }
-
-/*Postions Text in About grid cell and sizes the font*/
-.about-text {
-  align-self: center;
-  padding-right: 10%;
-  font-size: 150%;
-}
-
 /* **Built Projects Section - EMPTY** */
 
 /* **Skills Section** */
@@ -75,28 +45,7 @@ ul {
   height: 32px;
 }
 
-/* **Contact Me Section** */
-
-/*Grid for Contact section (also sets font-family for grid; used id so can link to this; sets overflow as hidden, because worked out that there was overflow on child element)*/ /*CREDIT: worked this out thanks to the help of CSS-Tricks (2014) Finding/Fixing Unintended Body Overflow (https://css-tricks.com/findingfixing-unintended-body-overflow/)*/
-#contact {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 15% 85%;
-  grid-column-gap: 1em;
-  font-family: var(--font-family);
-  overflow-x: hidden;
-}
-
-/*Flex container for Contact links (in unordered list)*/
- #contact ul {
-  display: flex;
-  justify-content: space-around;
- }
- 
- /*Sets Contact links (list items) to inline*/
- #contact li {
-  display: inline;
- }
+/* **About/Contact Section - EMPTY** */
 
  /*Styling for links in Work section (removes underlining, sets font family as per var function, sets font size and font weight)*/
  #contact a {
