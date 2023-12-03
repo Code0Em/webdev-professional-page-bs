@@ -1,4 +1,5 @@
-/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section 3. Set size of images (icons) in Skills section 4.Deleted CSS for About and Contact sections 5. Changed font-family in var() function. 6. Deleted global styling that’s no longer needed 7. Added custom styling to body, and p, h1-6, links and unordered lists/list items throughout the page (did this by targeting id on body, so overrides Bootstrap’s styling). 8. Added credit for this idea in comments. 9. Added important property to font-family (so completely overrides Bootstrap's styling).
+/* MY EDITS: 1. Deleted CSS for Header/Navbar styling (because Bootstrap now provides this) 2. Deleted CSS for Work section 3. Set size of images (icons) in Skills section 4.Deleted CSS for About and Contact sections 5. Changed font-family in var() function. 6. Deleted global styling that’s no longer needed 7. Added custom styling to body, and p, h1-6, links and unordered lists/list items throughout the page (did this by targeting id on body, so overrides Bootstrap’s styling). 8. Added credit for this idea in comments. 9. Added important property to font-family (so completely overrides Bootstrap's styling) 10. Added styling to Footer, including hover effect to links/images (icons) 11. Added credit for box-shadow colour in comments.
+
 */
 
 /* **Whole page (global)** */
@@ -36,6 +37,26 @@
 }
 
 /* **About/Contact Section - EMPTY** */
+
+/* **Footer** */
+
+/*Sets paragraph colour in Footer*/
+#bootstrap-override .footer p {
+  color: var(--light);
+}
+
+/*Sizes Footer icons and applies total invert of colours*/
+#bootstrap-override .footer img {
+  filter: invert(100%);
+  width: 45px;
+  height: 45px;
+}
+
+/*Sets partial invert and box shadow to Footer icons (links) when hover over them*//*CREDIT: box-shadow colour combination cited from W3Schools (no date) CSS Box Shadow (https://www.w3schools.com/css/css3_shadows_box.asp)*/
+#bootstrap-override .footer img:hover {
+  filter: invert(40%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* **Media Queries** */
 
